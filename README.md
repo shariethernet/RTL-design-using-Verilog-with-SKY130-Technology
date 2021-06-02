@@ -25,4 +25,5 @@ Yosys is an open source logic synthesising software which reads the library file
 ## Reason for the presence of different flavours of gate
 
 Consider the following diagram
+
  ![Launch and capture flip flop circuit arrangement with a combinational delay](https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology/blob/main/images/1.PNG)
