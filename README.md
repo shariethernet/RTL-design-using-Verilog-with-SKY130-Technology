@@ -22,5 +22,7 @@ The library file has slow, fast, typical type of logic gates. The reason for the
 
 Yosys is an open source logic synthesising software which reads the library file and the verilog design and then generates the RTL Level Netlist which shows the gate level implementation of the design required
 
+## Reason for the presence of different flavours of gate
+
 Consider the following diagram
  ![Launch and capture flip flop circuit arrangement with a combinational delay](https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology/blob/main/images/1.PNG)
