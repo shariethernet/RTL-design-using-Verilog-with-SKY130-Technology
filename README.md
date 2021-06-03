@@ -25,5 +25,47 @@ Yosys is an open source logic synthesising software which reads the library file
 ## Reason for the presence of different flavours of gate
 
 Consider the following diagram
-
  ![Launch and capture flip flop circuit arrangement with a combinational delay](https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology/blob/main/images/1.PNG)
+
+The maximum speed of operation of the circuit depends on the delay produced by the gates used. 
+
+### How long must the clock period be?
+
+ - The clock period must be long enough that a signal from DFF A travels
+   to DFF     			 B completely
+- In other words, in 1 clock cycle the data from A must reach B
+- #### Why? 
+	- Let us assume that both the DFF A and B are positive edge triggered. 
+	- At the first positive edge 
+		- The input to DFF A reaches the Q of DFF A and starts to propagate to the combinational logic
+		- The previous output of the combinational logic appears at the output of DFF B
+
+To satisfy this criteria 
+
+	 Tclk > TpropDFFA + Tpropcomb + TsetupDFFB
+The time period of the clock must be greater than the Propagation delay of DFF A , combinational delay and the Setup Time of DFF B
+
+This gives the minimum required clock period or the maximum frequency for the circuit to function as expected.
+
+If the frequency is too high then the clock's positive edge arrives even before the launched data reaches the capture flip flop leading to the sampling of the wrong value rendering the circuit useless
+
+### We need faster circuits, so we require fast cells. Why do we need slow cells?
+
+We require the slow cells to avoid HOLD Violations aat the DFF B
+If the circuit is too fast then the data sampled at the DFF B ends up being the same data launched at DFF A at the same timeperiod.
+
+The launched data must reach the DFF B only in the next posedge of the clock. This imposes the condition for the maximum hold time
+
+	Thold = TpropDFFA + Tpropcomb 
+
+## Faster Cells vs Slowercells
+
+ - The load in the Digital circuit is capacitive
+ - So the RC time constant determines the speed of operation of the circuit
+ - We desire a faster operation, which means that the charging and the discharging times must be smaller, which implies smaller values of RC time constant. 
+ - R is a constant for the given material. To reduce the RC time constant the capacitance has to be lowered. We know that capacitance is inversely proportional to the width
+ - This leads to an increased width for lower capacitance and hence faster cells
+ - However higher width results in increased area and power
+ - On the other had slower transistors have larger RC value, with smaller widths leading to lesser area and power
+ - It is seen that Power, Area and Speed are the three important factors that are traded off.
+ - It is upto the scenario, where the designer choses the standard cells such that he/she meets the Power, Area and Speed requirements of the circuit
