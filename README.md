@@ -162,6 +162,10 @@ Run the following command
  ```
    You will be able to see the Skywater libraries maped to the synthesised logic
  
+ ## References
  
+ - [Skywater 130](https://github.com/google/skywater-pdk)
+ - [Yosys](http://www.clifford.at/yosys/)
+ - [Kunal Gosh, VLSI System Design](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop)
 
 
