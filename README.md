@@ -2,6 +2,8 @@
 
 This repository has a quick documentation covering the basics of RTL Design using verilog using the open source Skywarer 130nm PDK. This covers the basics of RTL Design using Verilog and simulation, Logic synthesis and optimisations
 
+For a detailed information refer [my documentation by clicking here](https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology/blob/main/images/VSD-RTL%20design%20using%20Verilog%20and%20Skywater%20130.pdf)
+
 
 ## RTL Design
 
