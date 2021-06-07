@@ -100,8 +100,68 @@ The synthesised Netlist will have the implementation of the circuit interms of t
 Run the following command 
  ```
  apt install iverilog gtkwave yosys
- 
  ```
+ 
+## Simulating the RTL Design
+ 
+ - Use iverlog to load the file and its testbench
+   ```
+   iverilog good_mux.v tb_good_mux.v
+   ./a.out
+   ```
+ - Open the .vcd \[Value change dump] file using gtkwave
+   ```
+   gtkwave tb_good_mux.vcd
+   ```
+ - Append the required variables and view the waveform
+ 
+## Logic Synthesis
+
+ - Clone this repository and enter the following directory 
+ ```
+ git clone https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology
+ cd RTL-design-using-Verilog-with-SKY130-Technology/verilog_files
+ ```
+ - start yosys
+ ```
+ yosys
+ ```
+   Press Enter. Yosys opens
+ - Add the liberty file using the below command
+ ```
+ read_liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ ```
+ - Read the verilog file. If multiple modules are instantiated then read all the files
+ ```
+ read_verilog good_mux.v
+ ```
+ - Specify the top module and then synthesize the verilog file. Replace good_mux with your top module name
+ ```
+ synth -top good_mux
+ ```
+   At this point type "show". you will be able to see the Syntheised logic, but the skywater libraries will not be mapped yet.
+ - use the abc command to map the libraries
+ ```
+ abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ ```
+ - If there are any flip flops map them by using the following command
+ ```
+ dfflibmap ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ ```
+ - Clean the unused wires (This is optional)
+ ```
+ opt_clean -purge
+ ```
+ - Generate the verilog netlist
+ ```
+ write_verilog go0d_mux_net.v
+ ```
+ - view the synthesised design with the show command. When there are multiple modules use "show modulename"
+ ```
+ show
+ ```
+   You will be able to see the Skywater libraries maped to the synthesised logic
+ 
  
 
 
