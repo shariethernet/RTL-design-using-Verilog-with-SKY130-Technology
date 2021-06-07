@@ -135,15 +135,19 @@ Run the following command
  ```
  read_verilog good_mux.v
  ```
+ ![](/images/3.png)
  - Specify the top module and then synthesize the verilog file. Replace good_mux with your top module name
  ```
  synth -top good_mux
  ```
+ ![](/images/4.png)
+ ![](/images/5.png)
    At this point type "show". you will be able to see the Syntheised logic, but the skywater libraries will not be mapped yet.
  - use the abc command to map the libraries
  ```
  abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  ```
+ ![](/images/6.png)
  - If there are any flip flops map them by using the following command
  ```
  dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -160,6 +164,7 @@ Run the following command
  ```
  show
  ```
+ ![](/images/7.png)
    You will be able to see the Skywater libraries maped to the synthesised logic
  
  ## References
