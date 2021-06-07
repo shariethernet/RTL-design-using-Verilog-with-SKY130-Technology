@@ -94,3 +94,14 @@ The synthesised Netlist will have the implementation of the circuit interms of t
  - The simulator looks for the changes in the input
  - The output is re-evaluated only when there are changes in the input at a given time
  - Else the output is the same
+
+## Installing the required packages
+
+Run the following command 
+ ```
+ apt install iverilog gtkwave yosys
+ 
+ ```
+ 
+
+
