@@ -70,3 +70,9 @@ The launched data must reach the DFF B only in the next posedge of the clock. Th
  - On the other had slower transistors have larger RC value, with smaller widths leading to lesser area and power
  - It is seen that Power, Area and Speed are the three important factors that are traded off.
  - It is upto the scenario, where the designer choses the standard cells such that he/she meets the Power, Area and Speed requirements of the circuit
+
+### Selection of Cells
+ - The Synthesizer needs to be guided with the selection of the flavour of cells that is optimal for implementing the circuit
+ - More use of faster cells increases the Power, Area and also may cause Hold Time violations
+ - More use of smaller cells causes the circuit to slow down 
+ - This set of guidance offered to the synthesiser to select the standard cells according to the requirement is called as constraints
