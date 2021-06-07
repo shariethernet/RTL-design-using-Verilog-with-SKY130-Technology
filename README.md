@@ -81,3 +81,6 @@ The launched data must reach the DFF B only in the next posedge of the clock. Th
 Refer the following link to know about the naming of the library files
 [Library Naming  Scheme
 ](https://github.com/google/skywater-pdk/blob/main/docs/contents/libraries.rst)
+
+## Block Diagram of Logic Synthesis
+![](/images/2.png)
