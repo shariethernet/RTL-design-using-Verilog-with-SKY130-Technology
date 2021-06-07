@@ -146,7 +146,7 @@ Run the following command
  ```
  - If there are any flip flops map them by using the following command
  ```
- dfflibmap ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+ dfflibmap -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
  ```
  - Clean the unused wires (This is optional)
  ```
