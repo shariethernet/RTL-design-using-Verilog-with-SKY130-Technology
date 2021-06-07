@@ -144,6 +144,7 @@ Run the following command
  ```
  ![](/images/4.png)
  ![](/images/5.png)
+ 
    At this point type "show". you will be able to see the Syntheised logic, but the skywater libraries will not be mapped yet.
  - use the abc command to map the libraries
  ```
