@@ -20,7 +20,7 @@ The library file has slow, fast, typical type of logic gates. The reason for the
 
 ### Yosys - Open source Logic synthesiser
 
-Yosys is an open source logic synthesising software which reads the library file and the verilog design and then generates the RTL Level Netlist which shows the gate level implementation of the design required
+[Yosys](http://www.clifford.at/yosys/) is an open source logic synthesising software which reads the library file and the verilog design and then generates the RTL Level Netlist which shows the gate level implementation of the design required
 
 ## Reason for the presence of different flavours of gate
 
