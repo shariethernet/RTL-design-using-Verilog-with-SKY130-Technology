@@ -165,6 +165,7 @@ Run the following command
  show
  ```
  ![](/images/7.png)
+ 
    You will be able to see the Skywater libraries maped to the synthesised logic
  
  ## References
