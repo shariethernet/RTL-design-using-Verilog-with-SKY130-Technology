@@ -89,3 +89,8 @@ Refer the following link to know about the naming of the library files
 
 ### Verifying the Synthesis
 The synthesised Netlist will have the implementation of the circuit interms of the standard cells instantiated. Inorder to verify that the generated gate level model coincides with the RTL design the RTL Netlist can be simulated with the same testbench (The module names dosent change).
+
+### Simulator Working
+ - The simulator looks for the changes in the input
+ - The output is re-evaluated only when there are changes in the input at a given time
+ - Else the output is the same
