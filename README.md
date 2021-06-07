@@ -76,3 +76,8 @@ The launched data must reach the DFF B only in the next posedge of the clock. Th
  - More use of faster cells increases the Power, Area and also may cause Hold Time violations
  - More use of smaller cells causes the circuit to slow down 
  - This set of guidance offered to the synthesiser to select the standard cells according to the requirement is called as constraints
+
+## Library naming
+Refer the below link to know about the naming of the library files
+[Library Naming  Scheme
+](https://github.com/google/skywater-pdk/blob/main/docs/contents/libraries.rst)
