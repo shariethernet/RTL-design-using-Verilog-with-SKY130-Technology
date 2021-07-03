@@ -165,8 +165,8 @@ Run the following command
  
  ## References
  
+ - [Kunal Gosh, VLSI System Design](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop)
  - [Skywater 130](https://github.com/google/skywater-pdk)
  - [Yosys](http://www.clifford.at/yosys/)
- - [Kunal Gosh, VLSI System Design](https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop)
 
 
