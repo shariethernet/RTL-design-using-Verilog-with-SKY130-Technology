@@ -26,10 +26,6 @@ The library file has slow, fast, typical type of logic gates. The reason for the
 
 ## Reason for the presence of different flavours of gate
 
-Consider the following diagram
-
- ![Launch and capture flip flop circuit arrangement with a combinational delay](https://github.com/shariethernet/RTL-design-using-Verilog-with-SKY130-Technology/blob/main/images/1.PNG)
-
 The maximum speed of operation of the circuit depends on the delay produced by the gates used. 
 
 ### How long must the clock period be?
