@@ -80,10 +80,6 @@ Refer the following link to know about the naming of the library files
 [Library Naming  Scheme
 ](https://github.com/google/skywater-pdk/blob/main/docs/contents/libraries.rst)
 
-## Block Diagram of Logic Synthesis
-
-### Yosys Setup
-![](/images/2.png)
 
 ### Verifying the Synthesis
 The synthesised Netlist will have the implementation of the circuit interms of the standard cells instantiated. Inorder to verify that the generated gate level model coincides with the RTL design the RTL Netlist can be simulated with the same testbench (The module names dosent change).
